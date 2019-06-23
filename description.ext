@@ -1,0 +1,49 @@
+// description.ext file created in A2D Editor by EMSI
+
+#include "ui_scripts\defines.hpp"
+#include "ui_scripts\cap_dialog.hpp"
+
+onLoadName ="Sector 01";
+OnLoadMission="Sector 01 is infested with hired soldiers from the North African regions. Clear them out and hopefully we may find what is attracting them to this Island.";
+
+
+
+loadscreen="Campaigns\a3_gdc_jd\images\pic02.jpg";
+pictureMap = "Campaigns\a3_gdc_jd\images\GirlWithGun_02.jpg";
+//overviewPicture="C:\Program Files (x86)\Steam\steamapps\common\Arma 3\Campaigns\a3_gdc_jd\images\pic02.jpg";
+overviewText="Sector 01 is infested with hired soldiers from the North African regions. We are not sure why they are here other than to profit from the recent misfortunes of the people of Altis. Clear them out and hopefully we may find what is attracting them to this Island. ";
+
+
+
+
+
+
+
+// Other code
+author = "John D.";
+
+
+class CfgCommunicationMenu
+{
+    class helo_taxi
+    {
+        text = "Support Menu"; // Text displayed in the menu and in a notification
+        submenu = "#USER:MENU_SUPPORT_1";  // Submenu opened upon activation
+		expression = "";
+        icon = "\a3\ui_f\data\gui\cfg\hints\CallSupport_CA.paa";
+        cursor = ""; // Custom cursor displayed when the item is selected
+        enable = "1"; // Simple expression condition for enabling the item
+        removeAfterExpressionCall = 1; // 1 to remove the item after calling
+    };
+	 class reset_helo
+    {
+        text = "Reset Support Comms"; // Text displayed in the menu and in a notification
+        submenu = "";  // Submenu opened upon activation
+		expression = "LF_resetHelo = [helitaxi, helipad0, callsign] execVM 'support\HQ\resetCommsMenu.sqf'";
+        icon = "";
+        cursor = ""; // Custom cursor displayed when the item is selected
+        enable = "1"; // Simple expression condition for enabling the item
+        removeAfterExpressionCall = 1; // 1 to remove the item after calling
+    };
+};
+

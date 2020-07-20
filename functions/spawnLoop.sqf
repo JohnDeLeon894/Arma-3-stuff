@@ -59,12 +59,12 @@ catch{
 		}forEach _routArray;
 		private _waypoints = [_group, 100, EAST_SPAWN, false, false] call jMD_fnc_deleteAndSetWaypoints;
 	};
-	if (isNil doOnce or doOnce < count _friendlyGroupArray) then {
+	if (doOnce < count _friendlyGroupArray) then {
 		_x setBehaviour "SAFE";
 		doOnce = doOnce +1;
 	};
 } forEach _friendlyGroupArray;
 
-sleep 600;
+sleep 900;
 
 [] spawn jMD_fnc_spawnLoop;

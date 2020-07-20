@@ -21,6 +21,7 @@ ally_7 = createGroup [west, false];
 // variable for counting stuff
 groupCount = 0;
 continueLoop = true;
+doOnce = 0;
 
 // find the marker 
 // spawn points 
@@ -90,6 +91,13 @@ while {_continue} do {
 };
 
 // units arrays 
+
+TRANSPORTS = [
+	Rhino1,
+	Rhino2,
+	Rhino3
+];
+
 // enemy units 
 try{
 		// enemy soldiers array
@@ -104,9 +112,6 @@ try{
 catch {
 	hint str _exception;
 };
-
-
-
 
 // friendly soldiers array 
 bluforUnitsConfig= "getText (_x >> 'faction') == 'rhs_faction_usmc_wd' && getText (_x >> 'simulation') == 'soldier' &&  ['wd', getText (_x >> 'uniformClass')] call BIS_fnc_inString" configClasses (configFile >> "CfgVehicles");

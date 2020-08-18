@@ -9,6 +9,16 @@ attackGroup_6 = createGroup [east, false];
 attackGroup_7 = createGroup [east, false];
 attackGroup_8 = createGroup [east, false];
 
+enemyGroupArray = [
+	attackGroup_1,
+	attackGroup_2,
+	attackGroup_3,
+	attackGroup_4,
+	attackGroup_5,
+	attackGroup_6
+];
+
+
 // friendly groups 
 ally_1 = group player;
 ally_2 = createGroup [west, false];
@@ -17,6 +27,14 @@ ally_4 = createGroup [west, false];
 ally_5 = createGroup [west, false];
 ally_6 = createGroup [west, false];
 ally_7 = createGroup [west, false];
+
+friendlyGroupArray = [
+	ally_1,
+	ally_2,
+	ally_3,
+	ally_4,
+	ally_5
+];
 
 // variable for counting stuff
 groupCount = 0;

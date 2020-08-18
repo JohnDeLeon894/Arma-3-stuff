@@ -27,10 +27,10 @@ waitUntil {unitReady _transport};
 if (unitReady _transport) then
  { 
 	hint "We're at the destination, exit when ready.";
-	// _transport land "GET IN"; used only for helicopters?
+	_transport land "GET IN"; // used only for helicopters
 };
 
-// waitUntil{ready};
+waitUntil{unitReady _transport};
 if (_action != 'reinforce') then {
 call compile format['[%2] execVM "functions\transport\transport_%1_action.sqf"', _action, _transport];
 };

@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=1070;
+		nextID=1089;
 	};
 	class MarkerIDProvider
 	{
@@ -16,13 +16,13 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=24;
+		nextID=27;
 	};
 	class Camera
 	{
-		pos[]={2286.3071,110.36654,15757.124};
-		dir[]={0,-0.70710683,0.70710683};
-		up[]={0,0.70710677,0.70710677};
+		pos[]={6133.1279,135.42642,10478.618};
+		dir[]={0,-0.70710671,0.70710689};
+		up[]={0,0.70710683,0.70710665};
 		aside[]={0.99999994,0,0};
 	};
 };
@@ -47,7 +47,7 @@ addons[]=
 	"A3_Structures_F_EPA_Civ_Camping",
 	"A3_Structures_F_Civ_Camping",
 	"A3_Structures_F_Civ_Accessories",
-	"rhsusf_c_RG33L"
+	"RHS_US_A2_AirImport"
 };
 class AddonsMetaData
 {
@@ -119,8 +119,8 @@ class AddonsMetaData
 		};
 		class Item10
 		{
-			className="rhsusf_c_RG33L";
-			name="RG33L MRAP";
+			className="RHS_US_A2_AirImport";
+			name="RHSUSF A2 Air Ports";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
@@ -130,11 +130,14 @@ randomSeed=3356671;
 class ScenarioData
 {
 	author="Hamburtle";
+	overviewText="This is the over view.";
+	overViewPicture="SoldierImage_1.jpg";
 };
 class Mission
 {
 	class Intel
 	{
+		briefingName="Running With Rifles";
 		timeOfChanges=1800.0002;
 		startWeather=0.34999999;
 		startWind=0.1;
@@ -154,7 +157,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=60;
+		items=65;
 		class Item0
 		{
 			dataType="Group";
@@ -394,7 +397,7 @@ class Mission
 				class Item6
 				{
 					dataType="Waypoint";
-					position[]={6717.543,102.70823,10811.727};
+					position[]={6720.6592,102.67266,10813.325};
 					completitionRadius=100;
 					type="lambs_danger_Garrison";
 					expCond="call{true}";
@@ -414,7 +417,7 @@ class Mission
 		class Item7
 		{
 			dataType="Trigger";
-			position[]={6764.5854,105.47767,10873.402};
+			position[]={6764.585,105.47765,10873.402};
 			angle=4.9656887;
 			class Attributes
 			{
@@ -430,7 +433,7 @@ class Mission
 		class Item8
 		{
 			dataType="Trigger";
-			position[]={6717.3584,154.09004,10812.082};
+			position[]={6719.9165,154.05287,10813.027};
 			class Attributes
 			{
 				sizeA=100;
@@ -441,7 +444,7 @@ class Mission
 			};
 			id=16;
 			type="EmptyDetectorAreaR50";
-			atlOffset=51.37278;
+			atlOffset=51.372765;
 		};
 		class Item9
 		{
@@ -2912,12 +2915,12 @@ class Mission
 		class Item26
 		{
 			dataType="Marker";
-			position[]={5535.6182,116.82424,11635.363};
+			position[]={5582.8364,113.03507,11671.48};
 			name="loc_3";
 			type="Empty";
 			colorName="ColorRed";
 			id=1021;
-			atlOffset=6.6190109;
+			atlOffset=4.1437683;
 		};
 		class Item27
 		{
@@ -3212,7 +3215,7 @@ class Mission
 				class Item6
 				{
 					dataType="Waypoint";
-					position[]={6717.0903,102.72321,10812.086};
+					position[]={6720.5103,102.66553,10812.73};
 					completitionRadius=100;
 					type="lambs_danger_Patrol";
 					expCond="call{true}";
@@ -3302,13 +3305,13 @@ class Mission
 		class Item49
 		{
 			dataType="Trigger";
-			position[]={4994.2129,115.32713,10975.623};
+			position[]={4987.563,115.18705,10984.823};
 			class Attributes
 			{
 				name="sector_5";
 				condition="call{this}";
 				onActivation="call{[thisTrigger, 4] execVM ""triggerActivation.sqf""}";
-				sizeA=1000;
+				sizeA=2000;
 				sizeB=1500;
 				activationBy="WEST";
 				isRectangle=1;
@@ -3349,40 +3352,170 @@ class Mission
 			side="West";
 			class Entities
 			{
-				items=2;
+				items=4;
 				class Item0
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2277.217,85.29715,15781.908};
-						angles[]={0.021991149,2.6248531,0.012007865};
+						position[]={1989.5447,81.441109,16111.429};
+						angles[]={0.0219975,2.6248531,6.261188};
 					};
 					side="West";
-					flags=4;
+					flags=6;
 					class Attributes
 					{
-						name="Rhino3D";
 					};
-					id=1057;
-					type="rhsusf_usmc_marpat_wd_rifleman_m4";
+					id=1080;
+					type="rhsusf_usmc_marpat_wd_helipilot";
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2277.217,85.29715,15781.908};
-						angles[]={0.021991149,2.6248531,0.012007865};
+						position[]={1989.5447,81.441109,16111.429};
+						angles[]={0.0219975,2.6248531,6.261188};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=1081;
+					type="rhsusf_usmc_marpat_wd_helipilot";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1989.5447,81.441109,16111.429};
+						angles[]={0.0219975,2.6248531,6.261188};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=1082;
+					type="rhsusf_usmc_marpat_wd_helipilot";
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1989.5447,81.441109,16111.429};
+						angles[]={0.0219975,2.6248531,6.261188};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=1083;
+					type="rhsusf_usmc_marpat_wd_helipilot";
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=4;
+				};
+				class Links
+				{
+					items=4;
+					class Item0
+					{
+						linkID=0;
+						item0=1080;
+						item1=1079;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=1081;
+						item1=1079;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+					class Item2
+					{
+						linkID=2;
+						item0=1082;
+						item1=1079;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={1};
+						};
+					};
+					class Item3
+					{
+						linkID=3;
+						item0=1083;
+						item1=1079;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={2};
+						};
+					};
+				};
+			};
+			id=1055;
+			atlOffset=-0.00052642822;
+		};
+		class Item53
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1989.774,81.428413,16010.26};
+						angles[]={6.2671871,2.6248531,6.2671871};
 					};
 					side="West";
 					flags=6;
 					class Attributes
 					{
-						name="Rhino3G";
 					};
-					id=1058;
-					type="rhsusf_usmc_marpat_wd_rifleman_m4";
+					id=1077;
+					type="rhsusf_usmc_marpat_wd_helipilot";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1989.774,81.428413,16010.26};
+						angles[]={6.2671871,2.6248531,6.2671871};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=1078;
+					type="rhsusf_usmc_marpat_wd_helipilot";
 				};
 			};
 			class Attributes
@@ -3400,8 +3533,8 @@ class Mission
 					class Item0
 					{
 						linkID=0;
-						item0=1057;
-						item1=1056;
+						item0=1077;
+						item1=1076;
 						class CustomData
 						{
 							role=1;
@@ -3410,8 +3543,8 @@ class Mission
 					class Item1
 					{
 						linkID=1;
-						item0=1058;
-						item1=1056;
+						item0=1078;
+						item1=1076;
 						class CustomData
 						{
 							role=2;
@@ -3420,25 +3553,8 @@ class Mission
 					};
 				};
 			};
-			id=1055;
-		};
-		class Item53
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={2277.1985,86.837868,15781.893};
-				angles[]={0.021991149,2.6248531,0.012007865};
-			};
-			side="West";
-			flags=6;
-			class Attributes
-			{
-				init="call{[this]execVM ""functions\transport\transportAddAction.sqf"";}";
-				name="Rhino3";
-			};
-			id=1056;
-			type="rhsusf_M1232_MC_M2_usmc_wd";
+			id=1059;
+			atlOffset=-0.0010910034;
 		};
 		class Item54
 		{
@@ -3452,34 +3568,34 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2270.3459,85.312798,15776.689};
-						angles[]={0.020001473,2.6248531,0.012007865};
+						position[]={2062.1853,80.377602,16021.817};
+						angles[]={6.2631865,2.6248531,6.2651882};
 					};
 					side="West";
-					flags=4;
+					flags=6;
 					class Attributes
 					{
-						name="Rhino2D";
 					};
-					id=1060;
-					type="rhsusf_usmc_marpat_wd_rifleman_m4";
+					id=1071;
+					type="rhsusf_usmc_marpat_wd_helipilot";
+					atlOffset=0.0001449585;
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2270.3459,85.312798,15776.689};
-						angles[]={0.020001473,2.6248531,0.012007865};
+						position[]={2062.1853,80.377602,16021.817};
+						angles[]={6.2631865,2.6248531,6.2651882};
 					};
 					side="West";
-					flags=6;
+					flags=4;
 					class Attributes
 					{
-						name="Rhino2G";
 					};
-					id=1061;
-					type="rhsusf_usmc_marpat_wd_rifleman_m4";
+					id=1072;
+					type="rhsusf_usmc_marpat_wd_helipilot";
+					atlOffset=0.0001449585;
 				};
 			};
 			class Attributes
@@ -3497,8 +3613,8 @@ class Mission
 					class Item0
 					{
 						linkID=0;
-						item0=1060;
-						item1=1062;
+						item0=1071;
+						item1=1070;
 						class CustomData
 						{
 							role=1;
@@ -3507,107 +3623,8 @@ class Mission
 					class Item1
 					{
 						linkID=1;
-						item0=1061;
-						item1=1062;
-						class CustomData
-						{
-							role=2;
-							turretPath[]={0};
-						};
-					};
-				};
-			};
-			id=1059;
-		};
-		class Item55
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={2270.3274,86.853584,15776.671};
-				angles[]={0.020001473,2.6248531,0.012007865};
-			};
-			side="West";
-			flags=6;
-			class Attributes
-			{
-				init="call{[this]execVM ""functions\transport\transportAddAction.sqf"";}";
-				name="Rhino2";
-			};
-			id=1062;
-			type="rhsusf_M1232_MC_M2_usmc_wd";
-		};
-		class Item56
-		{
-			dataType="Group";
-			side="West";
-			class Entities
-			{
-				items=2;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={2264.592,85.3283,15771.089};
-						angles[]={0.016004669,2.6248531,0.015987216};
-					};
-					side="West";
-					flags=4;
-					class Attributes
-					{
-						name="Rhino1D";
-					};
-					id=1064;
-					type="rhsusf_usmc_marpat_wd_rifleman_m4";
-					atlOffset=7.6293945e-006;
-				};
-				class Item1
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={2264.592,85.3283,15771.089};
-						angles[]={0.016004669,2.6248531,0.015987216};
-					};
-					side="West";
-					flags=6;
-					class Attributes
-					{
-						name="Rhino1G";
-					};
-					id=1065;
-					type="rhsusf_usmc_marpat_wd_rifleman_m4";
-					atlOffset=7.6293945e-006;
-				};
-			};
-			class Attributes
-			{
-			};
-			class CrewLinks
-			{
-				class LinkIDProvider
-				{
-					nextID=2;
-				};
-				class Links
-				{
-					items=2;
-					class Item0
-					{
-						linkID=0;
-						item0=1064;
-						item1=1066;
-						class CustomData
-						{
-							role=1;
-						};
-					};
-					class Item1
-					{
-						linkID=1;
-						item0=1065;
-						item1=1066;
+						item0=1072;
+						item1=1070;
 						class CustomData
 						{
 							role=2;
@@ -3617,15 +3634,41 @@ class Mission
 				};
 			};
 			id=1063;
-			atlOffset=7.6293945e-006;
+			atlOffset=0.00012207031;
+		};
+		class Item55
+		{
+			dataType="Marker";
+			position[]={2031.0865,81.195557,16053.236};
+			name="rtz";
+			text="Rhino Transport Zone";
+			type="mil_join";
+			id=1067;
+		};
+		class Item56
+		{
+			dataType="Trigger";
+			position[]={2209.5869,84.094025,15793.585};
+			class Attributes
+			{
+				text="call Reinforcements";
+				condition="call{this}";
+				onActivation="call{onMapSingleClick ' " \n "   onMapSingleClick """"; " \n "   [_pos, ""reinforce""]execVM ""functions\transport\callTransport.sqf""; " \n "  ';}";
+				sizeA=0;
+				sizeB=0;
+				repeatable=1;
+				activationBy="BRAVO";
+			};
+			id=1068;
+			type="EmptyDetector";
 		};
 		class Item57
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={2264.5674,86.86911,15771.063};
-				angles[]={0.016004669,2.6248531,0.015987216};
+				position[]={2062.2202,82.562752,16021.732};
+				angles[]={6.2631865,2.6248531,6.2651882};
 			};
 			side="West";
 			flags=6;
@@ -3634,36 +3677,122 @@ class Mission
 				init="call{[this]execVM ""functions\transport\transportAddAction.sqf"";" \n "}";
 				name="Rhino1";
 			};
-			id=1066;
-			type="rhsusf_M1232_MC_M2_usmc_wd";
-			atlOffset=7.6293945e-006;
+			id=1070;
+			type="RHS_UH1Y_UNARMED";
+			atlOffset=0.00012207031;
 		};
 		class Item58
 		{
-			dataType="Marker";
-			position[]={2271.3459,85.375999,15773.16};
-			name="rtz";
-			text="Rhino Transport Zone";
-			type="mil_join";
-			id=1067;
-			atlOffset=0.00046539307;
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1989.796,83.613808,16010.24};
+				angles[]={6.2671871,2.6248531,6.2671871};
+			};
+			side="West";
+			flags=6;
+			class Attributes
+			{
+				init="call{[this]execVM ""functions\transport\transportAddAction.sqf"";}";
+				name="Rhino2";
+			};
+			id=1076;
+			type="RHS_UH1Y_FFAR";
+			atlOffset=-0.0010910034;
 		};
 		class Item59
 		{
-			dataType="Trigger";
-			position[]={2209.5869,84.094025,15793.585};
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1989.5752,83.626602,16111.383};
+				angles[]={0.0219975,2.6248531,6.261188};
+			};
+			side="West";
+			flags=6;
 			class Attributes
 			{
-				text="call Reinforcements";
-				condition="call{this}";
-				onActivation="call{onMapSingleClick ' " \n "   onMapSingleClick """"; " \n "   [_pos]execVM ""functions\transport\callTransport.sqf""; " \n "  ';}";
-				sizeA=0;
-				sizeB=0;
-				repeatable=1;
-				activationBy="BRAVO";
+				init="call{[this]execVM ""functions\transport\transportAddAction.sqf"";}";
+				name="Rhino3";
 			};
-			id=1068;
-			type="EmptyDetector";
+			id=1079;
+			type="RHS_UH1Y";
+			atlOffset=-0.00052642822;
+		};
+		class Item60
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1989.2029,81.443703,16111.538};
+				angles[]={0.0219975,0,6.261188};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1084;
+			type="HeliHEmpty";
+		};
+		class Item61
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2058.718,80.497238,16106.291};
+				angles[]={0.019999012,0,6.2651882};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1085;
+			type="HeliHEmpty";
+		};
+		class Item62
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2059.7302,80.470467,16024.273};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1086;
+			type="HeliHEmpty";
+			atlOffset=0.0001373291;
+		};
+		class Item63
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2110.7456,79.605919,16053.827};
+				angles[]={6.2791886,0,6.2571931};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1087;
+			type="HeliHEmpty";
+		};
+		class Item64
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1986.5797,81.50441,16011.855};
+				angles[]={6.2671871,0,6.2671871};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1088;
+			type="HeliHEmpty";
 		};
 	};
 };

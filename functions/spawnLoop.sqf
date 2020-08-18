@@ -5,22 +5,6 @@ if (!continueLoop) exitWith {
 };
 //declare groups to count
 
-private _enemyGroupArray = [
-	attackGroup_1,
-	attackGroup_2,
-	attackGroup_3,
-	attackGroup_4,
-	attackGroup_5,
-	attackGroup_6
-];
-
-private _friendlyGroupArray = [
-	ally_1,
-	ally_2,
-	ally_3,
-	ally_4,
-	ally_5
-];
 try{
 	{
 		// Current result is saved in variable _x
@@ -30,7 +14,7 @@ try{
 		hint format ['%1 living units in group %2', _count, _x];
 		private _results =  [_x, (6 - _count), Isis_units, EAST_SPAWN] call  jMD_fnc_spawnGroups;
 		private _waypoints = [_x, 200, _location, true, true] call jMD_fnc_deleteAndSetWaypoints;
-	} forEach _enemyGroupArray;
+	} forEach enemyGroupArray;
 }
 catch{
 	hint str _exception;
@@ -39,7 +23,7 @@ catch{
 {
 	// Current result is saved in variable _x
 	scopeName "unitSpawn";
-	private _groupSize = 5; // desired size of each group
+	private _groupSize = 8; // desired size of each group
 	private _count = {alive _x}count units _x;
 	private _group = _x;
 	private _routArray = [ROUT_ONE, ROUT_TWO, ROUT_THREE] call BIS_fnc_selectRandom;
@@ -59,11 +43,12 @@ catch{
 		}forEach _routArray;
 		private _waypoints = [_group, 100, EAST_SPAWN, false, false] call jMD_fnc_deleteAndSetWaypoints;
 	};
-	if (doOnce < count _friendlyGroupArray) then {
+	if (doOnce < count friendlyGroupArray) then {
 		_x setBehaviour "SAFE";
 		doOnce = doOnce +1;
+		friendlyGroupArray deleteAt (friendlyGroupArray find group player);
 	};
-} forEach _friendlyGroupArray;
+} forEach friendlyGroupArray;
 
 sleep 900;
 

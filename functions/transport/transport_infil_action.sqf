@@ -9,7 +9,7 @@ waitUntil {unitReady _transport};
 if (unitReady _transport) then
  { 
 	hint "landing";
-	// hellcat_6 land "land";
+	_transport land "land";
 	sleep 30;
 	hint format['%1 ready for nextmission', _transport];
 	[_transport]execVM "functions\transport\transportAddAction.sqf";

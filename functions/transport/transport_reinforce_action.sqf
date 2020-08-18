@@ -2,7 +2,7 @@
 
 private _transport = _this select 0;
 private _group = group player;
-private _troopLimit = 5;
+private _troopLimit = 8;
 private _reinforcementCount = _troopLimit - ({alive _x} count units group player);
 private _position = getMarkerPos 'westSpawn';
 

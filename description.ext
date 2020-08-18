@@ -1,6 +1,6 @@
 
 
-onLoadName = "";
+onLoadName = "The Mission Title";
 OnLoadMission = "";
 
 // loadscreen="";

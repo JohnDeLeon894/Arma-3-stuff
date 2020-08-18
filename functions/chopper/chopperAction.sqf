@@ -5,7 +5,7 @@ hint _action;
 // [] execVM 'chopperAddAction.sqf';
 if (_action == 'reinforce') then {
 	reinforceReady = false; 
-	call compile format['[%2] execVM "functions\chopper\chopper_%1_action.sqf"', _action, _pos];
+	call compile format['[%1] execVM "functions\chopper\chopper_%2_action.sqf"', _pos , _action];
 	_action = 'infil';
 	waitUntil {reinforceReady};	
 };
@@ -24,5 +24,5 @@ if (unitReady hellcat_6) then
 
 // waitUntil{ready};
 if (_action != 'reinforce') then {
-call compile format['[%2] execVM "functions\chopper\chopper_%1_action.sqf"', _action, _pos];
+call compile format['[%1] execVM "functions\chopper\chopper_%2_action.sqf"', _pos , _action];
 };
